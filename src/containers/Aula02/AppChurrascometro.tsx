@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useRef, useState } from "react";
-import "./App.css";
+import styles from "./AppChurrascometro.module.css";
 
 function AppChurrascometro() {
   const [input, setInput] = useState({
@@ -49,8 +49,8 @@ function AppChurrascometro() {
     let adulto = isNaN(parseInt(input.adultos)) ? 0 : parseInt(input.adultos);
     let crianca = isNaN(parseInt(input.criancas)) ? 0 : parseInt(input.criancas);
     let cerveja = adulto * 2;
-    let refrigerante = (crianca * 2) + (adulto * 1);
-    let agua = (crianca * 1) + (adulto * 1);
+    let refrigerante = (crianca * 0.5) + (adulto * 0.5);
+    let agua = (crianca * 0.2) + (adulto * 0.5);
     let carne = (crianca * 0.2) + (adulto * 0.5);
     const kitChurrasco = `${cerveja} Lts de Cerveja, ${refrigerante} Lts de Refrigerante, ${agua} Lts de Água e ${carne} Kgs de carne.`
     setInput((values) => ({
@@ -60,7 +60,7 @@ function AppChurrascometro() {
 }, [input.adultos, input.criancas]);
 
   return (
-    <div className="AppChurrascometro">
+    <div className={styles.AppChurrascometro}>
       <input
         onChange={(event) => handleInput(event, "input1")}
         value={input.input1}

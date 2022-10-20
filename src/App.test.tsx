@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './AppChurrascometro';
+import App from './containers/Aula02/AppChurrascometro';
 
 test('renders learn react link', () => {
   render(<App />);

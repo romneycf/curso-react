@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import "./App.css";
+import styles from "./AppAdvinha.module.css";
 
 function AppAdvinha() {
   const [contador, setContador] = useState(0);
@@ -31,7 +31,7 @@ function AppAdvinha() {
   }
 
   return (
-    <div className="AppAdvinha">
+    <div className={styles.AppAdvinha}>
       <p>Contador: {contador}</p>
       <button onClick={() => handleContador("decrementar")}>-</button>
       <button onClick={() => handleContador("incrementar")}>+</button>
