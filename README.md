@@ -1,3 +1,5 @@
+Curso de React ministrado por Daniel Tostes e promovido pela RBMWEB sistemas inteligentes.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
